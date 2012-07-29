@@ -6,6 +6,8 @@
     "start": "node app"
   },
   "dependencies": {
-	"mongoose": "*"
+	"mongoose": "*",
+	"journey": "*",
+	"filmsurf-routes": "*"
   }
 }

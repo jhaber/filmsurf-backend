@@ -1,11 +1,20 @@
-var http = require('http');
+var journey = require('journey');
+
+var router = new(journey.Router);
+require('filmsurf-routes').bind(router);
 
 var port = process.env.PORT || 8000;
 
-var server = http.createServer(function (request, response) {
-	response.writeHead(200, {"Content-Type": "text/plain"});
-	response.end("Hello World\n");
-});
+require('http').createServer(function (request, response) {
+	var body = "";
 
-server.listen(port);
+    request.addListener('data', function (chunk) { body += chunk });
+    request.addListener('end', function () {
+        router.handle(request, body, function (result) {
+            response.writeHead(result.status, result.headers);
+            response.end(result.body);
+        });
+    });
+}).listen(port);
+
 console.log("Server running at http://localhost:" + port);
