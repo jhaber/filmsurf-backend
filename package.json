@@ -10,7 +10,7 @@
     "start": "node app"
   },
   "dependencies": {
-	"express": "3.x",
+	"express": "3.0.x",
 	"filmsurf-routes": "0.0.1"
   }
 }
