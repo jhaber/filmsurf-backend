@@ -2,8 +2,8 @@
   "name": "filmsurf-backend",
   "version": "0.0.1",
   "engines": {
-    "node": "0.8.16",
-    "npm": "1.1.69"
+    "node": "0.8.14",
+    "npm": "1.1.65"
   },
   "private": true,
   "scripts": {
