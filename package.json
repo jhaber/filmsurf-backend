@@ -2,15 +2,15 @@
   "name": "filmsurf-backend",
   "version": "0.0.1",
   "engines": {
-    "node": "0.8.4",
-    "npm": "1.1.41"
+    "node": "0.8.16",
+    "npm": "1.1.69"
   },
   "private": true,
   "scripts": {
     "start": "node app"
   },
   "dependencies": {
-	"journey": "0.4.0-pre-3",
+	"express": "3.x",
 	"filmsurf-routes": "0.0.1"
   }
 }
